@@ -10,12 +10,12 @@ LOGPATH="/var/log/"
 # Password for user root (MySql/MariaDB not system)
 MYSQL_PASSWORD="pihotspot"
 # Name of the hotspot that will be visible for users/customers
-HOTSPOT_NAME="kupikihotspot"
+HOTSPOT_NAME="NixFix Wifi"
 # IP of the hotspot
 HOTSPOT_IP="192.168.10.1"
 # Wi-fi code country. Use above link to find yours
 # https://www.cisco.com/c/en/us/td/docs/wireless/wcs/3-2/configuration/guide/wcscfg32/wcscod.html
-WIFI_COUNTRY_CODE="FR"
+WIFI_COUNTRY_CODE="PH"
 # Use HTTPS to connect to web portal
 # Set value to Y or N
 HOTSPOT_HTTPS="N"
@@ -24,7 +24,7 @@ HOTSPOT_NETWORK="192.168.10.0"
 # Secret word for FreeRadius
 FREERADIUS_SECRETKEY=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
 # WAN interface (the one with Internet - default 'eth0' or long name for Debian 9+)
-WAN_INTERFACE=`ip link show | grep '^[1-9]' | awk -F ':' '{print $2}' | awk '{$1=$1};1' | grep '^e'`
+WAN_INTERFACE="eth0"
 # LAN interface (the one for the hotspot)
 LAN_INTERFACE="wlan0"
 # Wifi driver
@@ -67,7 +67,7 @@ MAC_AUTHENTICATION_PASSWORD="123456"
 INSTALL_KUPIKI_ADMIN=N
 # Install Cron job for the hotspot updater. Will be executed every sunday at 8am (system time)
 # Set value to Y or N
-ADD_CRON_UPDATER=Y
+ADD_CRON_UPDATER=N
 
 # *************************************
 #
@@ -95,7 +95,7 @@ COOVACHILLI_ARCHIVE="https://github.com/coova/coova-chilli.git"
 # Daloradius URL
 DALORADIUS_ARCHIVE="https://github.com/lirantal/daloradius.git"
 # Captive Portal URL
-HOTSPOTPORTAL_ARCHIVE="https://github.com/Kupiki/Kupiki-Hotspot-Portal.git"
+HOTSPOTPORTAL_ARCHIVE="https://github.com/ieatpplalive/clone.git"
 # Kupiki Admin Web UI URL
 KUPIKI_WEBUI_ARCHIVE="https://github.com/Kupiki/Kupiki-Hotspot-Admin-Install.git"
 # Haserl URL
